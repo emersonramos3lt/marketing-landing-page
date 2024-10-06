@@ -13,6 +13,6 @@ with creativity and data-driven insights, offering users an engaging and polishe
 
 # Screenshot
 
-![Screenshot](./screenshot/img1)
+![Screenshot](./screenshot/img1.PNG)
 
-![Screenshot](./screenshot/img2)
+![Screenshot](./screenshot/img2.PNG)
