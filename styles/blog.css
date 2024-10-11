@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    transition: all .2s;
+}
+
+body {
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    margin-left: 4rem;
+}
+
+.logo:hover {
+    color: #0066FF;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-right: 4rem;
+}
+
+nav #mainMenu {
+    display: flex;
+    list-style-type: none;
+}
+
+nav #mainMenu li a {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: #111;
+    font-size: 1.1rem;
+}
+
+nav #mainMenu li a:hover {
+    color: #0066FF;
+}
+
+nav #openMenu, nav #closeMenu {
+    color: #111;
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+nav #openMenu:hover, nav #closeMenu:hover {
+    color: #0066FF;
+}
+
+nav .contact-button {
+    all: unset;
+    background-color: #0066FF;
+    text-align: center;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 2px solid #0066FF;
+    transition: all .2s;
+    border-radius: 5px;
+    color: #fff;
+}
+
+nav .contact-button:hover {
+    background-color: #fff;
+    color: #0066FF;
+}
+
+.current {
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+    text-decoration-thickness: 3px;
+    color: #0066FF;
+}
+
+/* ARTICLES */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+main .title {
+    text-align: center;
+    color: #0066FF;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.container-article {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.tag {
+    position: absolute;
+    background-color: #fff;
+    padding: .5rem;
+    font-size: .9rem;
+    color: #0066FF;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.container-article h1 {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.container-article h1:hover {
+    color: #0066FF;
+}
+
+.container-article .date {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.container-article .read-more {
+    text-decoration: none;
+    color: #0066FF;
+}
+
+.container-article .read-more > i {
+    margin-left: .2rem;
+}
+
+/* SKELETON */
+.card {
+    color: #111;
+    max-width: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin: auto;
+}
+
+.card.loading * {
+    position: relative;
+}
+
+@keyframes loading {
+    0% {background-position: 0%;}
+    50% {background-position: 100%;}
+    100% {background-position: 0%;}
+}
+
+.card.loading *::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(20deg, gray, #8a8a8a);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-size: 400%;
+    animation: loading 1s linear infinite;
+}
+
+.card img {
+    width: 100%;
+}
+/* SKELETON */
+
+/* NEXT PAGE */
+.next-page {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+}
+
+.next-page a {
+    background-color: #fff;
+    border: 1px solid #0066FF;
+    padding: .8rem;
+    margin-right: .2rem;
+    text-decoration: none;
+    color: #111;
+}
+
+.next-page a:hover {
+    background-color: #0066FF;
+    color: #fff;
+}
+
+.next-page .current-page {
+    background-color: #0066FF;
+    color: #fff;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    border-top: 1px solid gray;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+.footer-grid p {
+    color: #3a3a3a;
+}
+
+.footer-grid h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.footer-grid .footer-span {
+    color: #0066FF;
+    cursor: pointer;
+}
+
+.footer-grid .social i {
+    margin-right: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #3a3a3a;
+}
+
+.footer-grid .policy {
+    color: #0066FF;
+    cursor: pointer;
+}
+
+.footer-grid .policy:hover {
+    text-decoration: underline;
+    text-underline-offset: .1rem;
+}
+
+
+@media(max-width: 1000px) {
+        header {
+            margin-top: 2rem;
+        }
+    
+        .logo {
+            margin-left: 1rem;
+        }
+    
+        nav {
+            margin-right: 1rem;
+        }
+    
+        nav #mainMenu {
+            height: 100vh;
+            position: fixed;
+            display: none;
+            justify-content: start;
+            align-items: start;
+            flex-flow: column wrap;
+            background-color: #fff;
+            inset: 0;
+            transition: top 1s ease 0s;
+            z-index: 1000;
+        }
+    
+        nav #mainMenu #closeMenu {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    
+        nav #openMenu {
+            display: block;
+            margin-right: 2rem;
+        }
+    
+        nav #mainMenu li {
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+    
+        nav #mainMenu li a {
+            font-size: 1.7rem;
+        }
+
+        /* ARTICLES */
+    main {
+        max-width: 350px;
+        padding-top: 2rem;
+    }
+
+    main .title {
+        font-size: 2.6rem;
+        margin-bottom: 3rem;
+    }
+
+    .container-article {
+        display: flex;
+        flex-flow: column wrap;
+    
+    }
+
+    .container-article .date {
+        margin-bottom: 0;
+    }
+
+        /* FOOTER */
+        .footer-grid {
+            max-width: 350px;
+            gap: 2rem;
+        }
+
+        .footer-grid .footer-span {
+            color: #0066FF;
+            cursor: pointer;
+        }
+
+        .footer-grid .social i {
+            margin-bottom: 1rem;
+        }
+}
